@@ -1,0 +1,5 @@
+chave de site: 6Lcj9VQkAAAAANTzsZfwoNAsYIz476kP3S-d2-TF
+
+chave secreta: 6Lcj9VQkAAAAAFnnqivZLGnGGhFyYKGMvapsOURk
+
+google api key: AIzaSyA3sAoj1Rrrc7XDAVF-4-jS0PACBLZSUdo
