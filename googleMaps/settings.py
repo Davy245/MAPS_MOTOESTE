@@ -120,10 +120,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
 
-STATICFILES_DIR = [
-    BASE_DIR / "static"
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
     ]
 
 GOOGLE_API_KEY = "AIzaSyA3sAoj1Rrrc7XDAVF-4-jS0PACBLZSUdo" 

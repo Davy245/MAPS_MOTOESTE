@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        {% block main %}
+
+          <script type="text/JavaScript">
+
+            var google_api_key = "{{google_api_key|safe}}"
+            var base_country = "{{base_country|safe}}"
+    
+          </script>
+    
+          
+          <input type="text" placeholder="Ponto inicial" id="id-google-address" name="google_address">
+
+          <input type="text" placeholder="Ponto Final" id="id-google-address" name="google_address">
+
+
+          <form id="start" method="POST" action="/profile">
+            {% csrf_token %}
+        
+           <label for="address" class="hidden-el" hidden>Address</label>
+           {{form.address}}
+
+           <label for="post_code" class="hidden-el" hidden>Longitude</label>
+           {{form.longitude}}
+        
+           <label for="country"  class="hidden-el" hidden>Latitude</label>
+           {{form.latitude}}
+        
+           <button disabled type="submit" id="profile-btn">Update</button>
+         </form>
+        
+
+        <div class = "container">
+
+        </div>
+
+        <script src="{% static 'google_places_api.js' %}"></script>
+          
+        {% endblock %}
+
+     
+</body>
+</html>

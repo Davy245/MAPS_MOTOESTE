@@ -11,6 +11,13 @@ def index(request):
 	"base_country": settings.BASE_COUNTRY}
     return render(request,'index.html', context=context)
 
+def test(request):
+    
+    context = {
+	"google_api_key": settings.GOOGLE_API_KEY,
+	"base_country": settings.BASE_COUNTRY}
+    
+    return render(request,'test.html', context=context)
 
 
 def route(request):
@@ -18,7 +25,7 @@ def route(request):
 	context = {
 	"google_api_key": settings.GOOGLE_API_KEY,
 	"base_country": settings.BASE_COUNTRY}
-	return render(request, 'index.html', context)
+	return render(request, 'route.html', context)
 
 
 '''
@@ -40,7 +47,7 @@ def map(request):
 			long_b=long_b,
 			)
 	else:
-		return redirect(reverse('main:route'))
+		return redirect(reverse('route'))
 
 	context = {
 	"google_api_key": settings.GOOGLE_API_KEY,
@@ -54,4 +61,4 @@ def map(request):
 	"directions": directions,
 
 	}
-	return render(request, 'main/map.html', context)
+	return render(request, 'map.html', context)

@@ -59,11 +59,7 @@ class SignInView(FormView):
 			login(self.request, user, backend='django.contrib.auth.backends.ModelBackend')
 			result = "Success"
 			message = 'You are now logged in'
-		else:
-			message = 'error'
-		data = {'result': result, 'message': message}
-		return JsonResponse(data)
-	
+		
 
 def sign_out(request):
 	'''

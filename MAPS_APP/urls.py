@@ -5,4 +5,5 @@ urlpatterns = [
     path('route', views.route, name="route"),
     path('map', views.map, name="map"),
     path('', views.index, name="index"),
+    path('test', views.test, name="test"),
 ]
